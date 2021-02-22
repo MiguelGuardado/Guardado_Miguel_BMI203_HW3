@@ -1,36 +1,17 @@
-[![Build
-Status](https://travis-ci.org/miriam-goldman/Final_Project_Skeleton.svg?branch=master)](https://travis-ci.org/miriam-goldman/Final_Project_Skeleton)
+# Project 3 - Neural Networks
+## Due 03/19/2021
 
-Example python project with testing.
+![BuildStatus](https://github.com/ucsf-bmi-203-2021/Project3/workflows/HW3/badge.svg?event=push)
 
-## usage
-
-To use the package, first make a new conda environment and activate it
-
+### main
+Runs all code in align/\_\_main\_\_.py, useful for part 2
 ```
-conda create -n exampleenv python=3
-source activate exampleenv
+python -m algs
 ```
 
-then run
-
-```
-conda install --yes --file requirements.txt
-```
-
-to install all the dependencies in `requirements.txt`. Then the package's
-main function (located in `example/__main__.py`) can be run as follows
-
-```
-python -m scripts
-```
-
-## testing
-
+### testing
 Testing is as simple as running
-
 ```
-python -m pytest
+python -m pytest test/*
 ```
-
 from the root directory of this project.
