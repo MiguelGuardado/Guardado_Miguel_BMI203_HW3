@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="English" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="English" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>scripts.NN &mdash; Neural Network Implementation, Project 3 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Neural Network Implementation, Project 3
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Neural Network Implementation, Project 3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">scripts.NN</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/autoapi/scripts/NN/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-scripts.NN">
+<span id="scripts-nn"></span><h1><a class="reference internal" href="#module-scripts.NN" title="scripts.NN"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scripts.NN</span></code></a><a class="headerlink" href="#module-scripts.NN" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scripts.NN.NeuralNetwork" title="scripts.NN.NeuralNetwork"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NeuralNetwork</span></code></a></p></td>
+<td><p><dl class="py attribute">
+<dt id="scripts.NN.X">
+<code class="sig-prename descclassname">scripts.NN.</code><code class="sig-name descname">X</code><a class="headerlink" href="#scripts.NN.X" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt id="scripts.NN.NeuralNetwork">
+<em class="property">class </em><code class="sig-prename descclassname">scripts.NN.</code><code class="sig-name descname">NeuralNetwork</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">Y</span></em>, <em class="sig-param"><span class="n">layers</span></em>, <em class="sig-param"><span class="n">epoch</span></em>, <em class="sig-param"><span class="n">learningrate</span></em>, <em class="sig-param"><span class="n">seed</span></em>, <em class="sig-param"><span class="n">gradient_desent</span><span class="o">=</span><span class="default_value">'stochastic'</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">activation_layers</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.NN.NeuralNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.X">
+<code class="sig-name descname">X</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.X" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input data you want to train, you can have as many observation as your want, but you must make sure each observation has the same lentgh for the input layer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.Y">
+<code class="sig-name descname">Y</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.Y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input data's actuall predictor to use as testing for the network, it can be a single predictions or multuple layer prediction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.learningrate">
+<code class="sig-name descname">learningrate</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.learningrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>learning rate of a network, will impact how fast you will try and reach convergence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.epoch">
+<code class="sig-name descname">epoch</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.epoch" title="Permalink to this definition">¶</a></dt>
+<dd><p>How many iterations you will go though to train the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.layers">
+<code class="sig-name descname">layers</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of number of hidden to define for your model, will read input layer from X, will also specify the output layer of the netowrk by the last value in the array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.gradient_desent">
+<code class="sig-name descname">gradient_desent</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.gradient_desent" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of gradient desncent you want to run. three options are [&quot;stochastic&quot;,&quot;batch&quot;,&quot;mini_batch&quot;], Default is</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.batch_size">
+<code class="sig-name descname">batch_size</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.batch_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>If you specify mini_batch as your input parameter, you must include a size of mini batches to run for loss.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.activation_layers">
+<code class="sig-name descname">activation_layers</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.activation_layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of activation functions to use for each neural network layer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.weights">
+<code class="sig-name descname">weights</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>weights of the network to use for training/predicting</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.bias">
+<code class="sig-name descname">bias</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.bias" title="Permalink to this definition">¶</a></dt>
+<dd><p>bias of the network to use for training/predicting</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.z">
+<code class="sig-name descname">z</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.z" title="Permalink to this definition">¶</a></dt>
+<dd><p>pre activation values for the hidden and output layer nodes, used as an intermediary for the forward/back prop</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.activation">
+<code class="sig-name descname">activation</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.activation" title="Permalink to this definition">¶</a></dt>
+<dd><p>activation values for the hidden and output layer nodes. The first index of this activation node will be the current input layer we are looking at</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scripts.NN.NeuralNetwork.loss_per_epoch">
+<code class="sig-name descname">loss_per_epoch</code><a class="headerlink" href="#scripts.NN.NeuralNetwork.loss_per_epoch" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of loss of the network for each epoch, array will always be length of epoch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scripts.NN.NeuralNetwork.loadweights">
+<code class="sig-name descname">loadweights</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">layers</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.NN.NeuralNetwork.loadweights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal functions
+Will load and inistalize the weight and bias for the neural networks to learn. Each weight and bias will be initalized
+randomly to avoid fitting a linear model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scripts.NN.NeuralNetwork.loadattributes">
+<code class="sig-name descname">loadattributes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">layers</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.NN.NeuralNetwork.loadattributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal functions:
+This will load the z,a for neural networks. For each layer in forward pass</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scripts.NN.NeuralNetwork.MSE">
+<code class="sig-name descname">MSE</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">ypred</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.NN.NeuralNetwork.MSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal functions: This will calculate the Mean Squared Error of the prediction value and the actual y values.
+Will still be able to use when you run your network.</p>
+<blockquote>
+<div><p>Args:
+y (array-like): 1-2 D array of the same shape from ypred, true prediction of the neural network.
+ypred (array-like): 1-2 D array of same shape from y, predictions from the neural network.
+Returns:
+ymse=(array-like): 1-2 D array of same shape of y,ypred. will return the mean squared error of the two arrays</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scripts.NN.NeuralNetwork.feedforward">
+<code class="sig-name descname">feedforward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.NN.NeuralNetwork.feedforward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal functions:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scripts.NN.NeuralNetwork.backprop">
+<code class="sig-name descname">backprop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.NN.NeuralNetwork.backprop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal function: Backpropgation of the network to update the weights and biases. Will do this iteratively
+so its not static for any specific network architecture.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scripts.NN.NeuralNetwork.getbatch">
+<code class="sig-name descname">getbatch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.NN.NeuralNetwork.getbatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal function. This will be used to determine the type of batch the network is using to feed the number
+of observation to train on per network</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scripts.NN.NeuralNetwork.runmodel">
+<code class="sig-name descname">runmodel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.NN.NeuralNetwork.runmodel" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is used to run and train the model based on the inputted test data. This will run based on how many epoch
+you will define earlier. This will test the weights and bias and update based off the error. This will utilize
+the forward propogation function, the backpropgation function, and the MSE function to fit the model.
+You must run this function before you use the predict function to make prediction off different datasets.
+Basic workflow of this function.
+1. Iterate though each epoch</p>
+<blockquote>
+<div><ol class="arabic simple" start="2">
+<li><p>Get input observation to run, [batch, mini batch, or stochastic]</p></li>
+<li><p>Feedforward based on input data</p></li>
+<li><p>Update weight and bias based off loss of trained values, run backpropogation</p></li>
+<li><p>Calculate loss of all observations used in the epoch</p></li>
+</ol>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scripts.NN.NeuralNetwork.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.NN.NeuralNetwork.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an single array, of predictions based on input data given. This functions should not be called Until you train the NN model via self.runmodel() method. This data can contain any desired amount of observation to predict, but each observation input layer MUST be the same size of the model you rained to run.</p>
+<p>Args:
+X (array-like): Input layer for the neural network to calculate predictions on</p>
+<p>Returns:
+Ypred (array-like): Activation function predictions based on the training data.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Miguel Guardado
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="English" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="English" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>scripts.io &mdash; Neural Network Implementation, Project 3 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Neural Network Implementation, Project 3
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Neural Network Implementation, Project 3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">scripts.io</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/autoapi/scripts/io/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-scripts.io">
+<span id="scripts-io"></span><h1><a class="reference internal" href="#module-scripts.io" title="scripts.io"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scripts.io</span></code></a><a class="headerlink" href="#module-scripts.io" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scripts.io.dna_one_hot" title="scripts.io.dna_one_hot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dna_one_hot</span></code></a></p></td>
+<td><p>This class is used to hold and calculate the one hot encodings for a dna sequences. All that is needed for</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scripts.io.relu" title="scripts.io.relu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">relu</span></code></a>(x, dx=False)</p></td>
+<td><p>Implementation of rectified linear activation functions for neural network node activation, as well evaluating the derivative of the</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scripts.io.sigmoid_activation" title="scripts.io.sigmoid_activation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sigmoid_activation</span></code></a>(x, dx=False)</p></td>
+<td><p>Implementation of sigmoid activation functions for neural network node activation, as well evaluating the derivative of the</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scripts.io.read_fasta" title="scripts.io.read_fasta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_fasta</span></code></a>(filename)</p></td>
+<td><p>This function is used to read in the fasta sequence text file. This will read in the file name and read and load</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scripts.io.read_seq_txts" title="scripts.io.read_seq_txts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_seq_txts</span></code></a>(filename)</p></td>
+<td><p>This function is used to read in the sequence text functions. Different from a fasta file, this is just the raw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scripts.io.get_dataset" title="scripts.io.get_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dataset</span></code></a>(pos_seq, neg_seq, neq_keep)</p></td>
+<td><p>This function is used to extract a training dataset for the postive and negative controls. The negative</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt id="scripts.io.relu">
+<code class="sig-prename descclassname">scripts.io.</code><code class="sig-name descname">relu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">dx</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.io.relu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implementation of rectified linear activation functions for neural network node activation, as well evaluating the derivative of the
+function. relu activation is a piecewise linear function that will output the same input if the value is positive
+,otherwise, it will output zero. This activation function is advantagous to avoid issues of saturation and does a
+better job training the neural network due to the avoidance of saturation and sensitivity</p>
+<p>Args:
+x (array-like): Values you want to calculate the activation function on, will calculate each value individually
+dx (boolean): if you want to calculate the activation function or its derivative, default is false, but if true
+than it will calculate the derivative of the activation function.</p>
+<p>Returns:
+x_activation (array-like): Array of the same shape as the input, will be the activation values for each inputted node</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="scripts.io.sigmoid_activation">
+<code class="sig-prename descclassname">scripts.io.</code><code class="sig-name descname">sigmoid_activation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">dx</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.io.sigmoid_activation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implementation of sigmoid activation functions for neural network node activation, as well evaluating the derivative of the
+function. Sigmoid activation has traditionally has been used of neural network learning, where you predict the
+probability as an output. Since the probability of anything will exist between the range of 0 and 1. this is often
+used for probability predicitng of an activation function.</p>
+<p>Args:
+x (array-like): Values you want to calculate the activation function on, will calculate each value individually
+dx (boolean): if you want to calculate the activation function or its derivative, default is false, but if true
+than it will calculate the derivative of the activation function.</p>
+<p>Returns:
+x_activation (array-like): Array of the same shape as the input, will be the activation values for each inputted node</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="scripts.io.read_fasta">
+<code class="sig-prename descclassname">scripts.io.</code><code class="sig-name descname">read_fasta</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.io.read_fasta" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to read in the fasta sequence text file. This will read in the file name and read and load
+in the file, make sure to check the directory and if it exist. if error is thrown, then you must
+specify the input filename.</p>
+<p>Args:
+filename (str): Fasta Filepath to find the sequence data to read in.</p>
+<p>Returns:
+seq(array-like): Array of the datatype that read from the file, will return each line as is its row in the array.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="scripts.io.read_seq_txts">
+<code class="sig-prename descclassname">scripts.io.</code><code class="sig-name descname">read_seq_txts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.io.read_seq_txts" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to read in the sequence text functions. Different from a fasta file, this is just the raw
+dna information for each individual, with each line representing an different seqeunce.</p>
+<p>Args:
+filename (str): Filepath to find the sequence data to read in.</p>
+<p>Returns:
+seq(array-like): Array of the datatype that read from the file, will return each line as is its row in the array.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="scripts.io.get_dataset">
+<code class="sig-prename descclassname">scripts.io.</code><code class="sig-name descname">get_dataset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos_seq</span></em>, <em class="sig-param"><span class="n">neg_seq</span></em>, <em class="sig-param"><span class="n">neq_keep</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.io.get_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to extract a training dataset for the postive and negative controls. The negative
+controls in the transcription binding data is unbalanaced and need us to downsample the number of training
+points used. This will input the two pos and neg arrays, as well as a number of how many negative samples
+you want to keep.</p>
+<p>Args:
+pos_seq (array-like): Input layer for the neural network to calculate predictions on
+neg_seq (array-like):
+neg_keep (int): number of negative controls to keep for the imbalanced dataset.</p>
+<p>Returns:
+X (array-like): Training X set to run
+Y (array-like): Training Y set to run</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="scripts.io.dna_one_hot">
+<em class="property">class </em><code class="sig-prename descclassname">scripts.io.</code><code class="sig-name descname">dna_one_hot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fasfa</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.io.dna_one_hot" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class is used to hold and calculate the one hot encodings for a dna sequences. All that is needed for
+initialization is the dna sequence you are trying to encode. This is used to input the dna sequence into the
+neural network.</p>
+<p>Attributes:
+raw_sequence (array-like): Hold the raw seqeunce of the file being inputted for one hot encoding
+sequence_list (array-like): list of each base pair in the index, in case you want to subset sections of the sequence for input.
+onehot (array-like): Binary array of DNA sequence encoding. array will be a of size 4 * length of the sequence.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Miguel Guardado
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

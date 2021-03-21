@@ -1,0 +1,17 @@
+:mod:`scripts`
+==============
+
+.. py:module:: scripts
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   NN/index.rst
+   __main__/index.rst
+   io/index.rst
+
+

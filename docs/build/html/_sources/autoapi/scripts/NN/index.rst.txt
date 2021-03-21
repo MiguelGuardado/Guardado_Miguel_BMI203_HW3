@@ -1,0 +1,167 @@
+:mod:`scripts.NN`
+=================
+
+.. py:module:: scripts.NN
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   scripts.NN.NeuralNetwork
+
+
+
+.. class:: NeuralNetwork(X, Y, layers, epoch, learningrate, seed, gradient_desent='stochastic', batch_size=None, activation_layers=None)
+
+
+   .. attribute:: X
+
+      Input data you want to train, you can have as many observation as your want, but you must make sure each observation has the same lentgh for the input layer
+
+      :type: array-like
+
+   .. attribute:: Y
+
+      Input data's actuall predictor to use as testing for the network, it can be a single predictions or multuple layer prediction.
+
+      :type: array-like
+
+   .. attribute:: learningrate
+
+      learning rate of a network, will impact how fast you will try and reach convergence.
+
+      :type: int
+
+   .. attribute:: epoch
+
+      How many iterations you will go though to train the data.
+
+      :type: int
+
+   .. attribute:: layers
+
+      array of number of hidden to define for your model, will read input layer from X, will also specify the output layer of the netowrk by the last value in the array.
+
+      :type: array-like
+
+   .. attribute:: gradient_desent
+
+      type of gradient desncent you want to run. three options are ["stochastic","batch","mini_batch"], Default is
+
+      :type: str
+
+   .. attribute:: batch_size
+
+      If you specify mini_batch as your input parameter, you must include a size of mini batches to run for loss.
+
+      :type: int
+
+   .. attribute:: activation_layers
+
+      array of activation functions to use for each neural network layer
+
+      :type: array like
+
+   .. attribute:: weights
+
+      weights of the network to use for training/predicting
+
+      :type: array-like
+
+   .. attribute:: bias
+
+      bias of the network to use for training/predicting
+
+      :type: array-like
+
+   .. attribute:: z
+
+      pre activation values for the hidden and output layer nodes, used as an intermediary for the forward/back prop
+
+      :type: array-like
+
+   .. attribute:: activation
+
+      activation values for the hidden and output layer nodes. The first index of this activation node will be the current input layer we are looking at
+
+      :type: array-like
+
+   .. attribute:: loss_per_epoch
+
+      array of loss of the network for each epoch, array will always be length of epoch.
+
+      :type: array-like
+
+   .. method:: loadweights(self, layers)
+
+      Internal functions
+      Will load and inistalize the weight and bias for the neural networks to learn. Each weight and bias will be initalized
+      randomly to avoid fitting a linear model.
+
+
+   .. method:: loadattributes(self, layers)
+
+      Internal functions:
+      This will load the z,a for neural networks. For each layer in forward pass
+
+
+   .. method:: MSE(self, y, ypred)
+
+      Internal functions: This will calculate the Mean Squared Error of the prediction value and the actual y values.
+      Will still be able to use when you run your network.
+
+          Args:
+          y (array-like): 1-2 D array of the same shape from ypred, true prediction of the neural network.
+          ypred (array-like): 1-2 D array of same shape from y, predictions from the neural network.
+          Returns:
+          ymse=(array-like): 1-2 D array of same shape of y,ypred. will return the mean squared error of the two arrays
+
+
+   .. method:: feedforward(self)
+
+      Internal functions:
+
+
+   .. method:: backprop(self)
+
+      Internal function: Backpropgation of the network to update the weights and biases. Will do this iteratively
+      so its not static for any specific network architecture.
+
+
+   .. method:: getbatch(self)
+
+      Internal function. This will be used to determine the type of batch the network is using to feed the number
+      of observation to train on per network
+
+
+   .. method:: runmodel(self)
+
+      This is used to run and train the model based on the inputted test data. This will run based on how many epoch
+      you will define earlier. This will test the weights and bias and update based off the error. This will utilize
+      the forward propogation function, the backpropgation function, and the MSE function to fit the model.
+      You must run this function before you use the predict function to make prediction off different datasets.
+      Basic workflow of this function.
+      1. Iterate though each epoch
+          2. Get input observation to run, [batch, mini batch, or stochastic]
+          3. Feedforward based on input data
+          4. Update weight and bias based off loss of trained values, run backpropogation
+          5. Calculate loss of all observations used in the epoch
+
+
+   .. method:: predict(self, X)
+
+      Returns an single array, of predictions based on input data given. This functions should not be called Until you train the NN model via self.runmodel() method. This data can contain any desired amount of observation to predict, but each observation input layer MUST be the same size of the model you rained to run.
+
+      Args:
+      X (array-like): Input layer for the neural network to calculate predictions on
+
+      Returns:
+      Ypred (array-like): Activation function predictions based on the training data.
+
+
+

@@ -121,8 +121,8 @@ def main():
 
     X_train, X_test, y_train, y_test = train_test_split(X,Y)
 
-    Test=NN.NeuralNetwork(X=X_train,Y=y_train, layers=[17,4,1],
-                          gradient_desent='stochastic', epoch=10000, learningrate=0.01 , seed=10)
+    Test=NN.NeuralNetwork(X=X_train, Y=y_train, layers=[17,4,1],
+                          gradient_descent='stochastic', epoch=10000, learningrate=0.01, seed=10)
     Test.runmodel()
 
     plt.plot(Test.loss_per_epoch)
@@ -136,8 +136,8 @@ def main():
     X_train, X_test, y_train, y_test = train_test_split(X,Y)
 
 
-    Test=NN.NeuralNetwork(X=X_train,Y=y_train, layers=[17,4,1],
-                          gradient_desent='batch', epoch=10000, learningrate=0.01 , seed=10)
+    Test=NN.NeuralNetwork(X=X_train, Y=y_train, layers=[17,4,1],
+                          gradient_descent='batch', epoch=10000, learningrate=0.01, seed=10)
     Test.runmodel()
 
     plt.plot(Test.loss_per_epoch)
@@ -151,8 +151,8 @@ def main():
 
     X_train, X_test, y_train, y_test = train_test_split(X,Y)
 
-    Test=NN.NeuralNetwork(X=X_train,Y=y_train, layers=[17,4,1],
-                          gradient_desent='mini_batch',batch_size=2, epoch=40000, learningrate=0.01 , seed=10)
+    Test=NN.NeuralNetwork(X=X_train, Y=y_train, layers=[17,4,1],
+                          gradient_descent='mini_batch', batch_size=2, epoch=40000, learningrate=0.01, seed=10)
     Test.runmodel()
 
     plt.plot(Test.loss_per_epoch)
@@ -164,8 +164,8 @@ def main():
     #Part 5 Predictions, Show Time!!!
     X,Y=io.get_dataset(pos_seq,neg_seq,500)
 
-    FinalModel=NN.NeuralNetwork(X=X,Y=Y, layers=[17,4,1],
-                          gradient_desent='stochastic', epoch=100, learningrate=0.01 , seed=12)
+    FinalModel=NN.NeuralNetwork(X=X, Y=Y, layers=[17,4,1],
+                                gradient_descent='stochastic', epoch=100, learningrate=0.01, seed=12)
     FinalModel.runmodel()
 
     rap1_seq = io.read_seq_txts("../data/rap1-lieb-test.txt")
