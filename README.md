@@ -6,7 +6,7 @@
 This repo is an implementation of a neural network by hand, only utilizing numpy arrays to train and learn the weights. This Neural Network was made to run neural network 
 made for two specific tasks, running autoencoder's, or running classification based off an sigmoid activation function. This implementation is made as a class called NeuralNetwork
 which was designed to handle a number of different parameters to train and learn the data. This network weight/bias passing though forward and back propogation was made so you can 
-define any amount of layers and not be hardcoded for specific architectures so its scalable for any test desired. Additionally parameters were also inputted, see below and in the do. This was done as a final project for 
+define any amount of layers and not be hardcoded for specific architectures so its scalable for any test desired. Additionally parameters were also inputted, see below and in the docs. This was done as a final project for 
 UCSF's Biological and Medical Information Algortihims class for the winter 2021 quarter. 
 
 ### docs
